@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="leo.com.e_at.nicecountview.IconMainActivity">
+
+    <leo.com.e_at.nicecountview.IconCountView
+        android:id="@+id/praise_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:count="0"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/praise_view2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:normalRes="@drawable/icon_praise_normal2"
+        app:selectedRes="@drawable/icon_praise_selected2"
+        app:state="false"
+        app:textSelectedColor="@color/text_selected"
+        app:zeroText="赞"
+        />
+
+    <leo.com.e_at.nicecountview.IconCountView
+        android:id="@+id/praise_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:count="0"
+        app:layout_constraintLeft_toLeftOf="@+id/praise_view1"
+        app:layout_constraintRight_toLeftOf="@+id/praise_view3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:normalRes="@drawable/icon_collect_normal1"
+        app:selectedRes="@drawable/icon_collect_selected1"
+        app:state="false"
+        app:textNormalColor="@color/text_gray"
+        app:textSelectedColor="@color/text_selected"
+        app:textSize="12sp"
+        app:zeroText="收藏"
+        />
+
+    <leo.com.e_at.nicecountview.IconCountView
+        android:id="@+id/praise_view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:count="4309"
+        app:layout_constraintLeft_toRightOf="@id/praise_view2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:normalRes="@drawable/icon_praise_normal2"
+        app:selectedRes="@drawable/icon_praise_selected2"
+        app:state="false"
+        />
+
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="设置点赞数量"
+        android:inputType="numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/praise_view1"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="确定"
+        app:layout_constraintBottom_toBottomOf="@id/edit_text"
+        app:layout_constraintLeft_toRightOf="@id/edit_text"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit_text"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
